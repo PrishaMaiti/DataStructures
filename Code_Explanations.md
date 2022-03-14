@@ -26,4 +26,21 @@ while(true) {
         }
 ```
 ## Challenge 2
+
+```
+public String toString() {
+        return "Object with value = " + Integer.toString(value);
+    }
+
+    // static method that enables me to see numbers swapped by reference (before, after)
+    public static void swapper(int n0, int n1) {
+        SwapObjects a = new SwapObjects(n0);
+        SwapObjects b = new SwapObjects(n1);
+        System.out.println("Before: a = " + a + " & b = " + b);
+        a.swapToLowHighOrder(b);  // conditionally build swap method to change values of a, b
+        System.out.println("After: a = " + a + " & b = " + b);
+        System.out.println();
+    }
+ ```
+
 ## Challenge 3
