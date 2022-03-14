@@ -1,3 +1,4 @@
+{% include navigation.html %}
 # Tech Talk 0 Data Structures
 - There are two main paradigms for programming: imperative which is considered with the state of the program and how it works, and object-oriented which, as the name suggest, is centered around classes and objects.
 - We've been working with Java, which is an OOP.
