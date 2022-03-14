@@ -27,6 +27,7 @@ while(true) {
 ```
 ## Challenge 2
 
+SwapObjects.java has a toString method to print a formatted string for the numbers to be swapped if not already in low to high order
 ```
 public String toString() {
         return "Object with value = " + Integer.toString(value);
@@ -44,3 +45,42 @@ public String toString() {
  ```
 
 ## Challenge 3
+
+Matrix.java has a toString method to print out a keypad
+```
+public String toString() {
+        String str = "";
+        String SEP = "  ";
+
+        int ROWS = 4;
+        int COLS = 3;
+
+        for(int i=0; i<4; i++) {
+            for(int j=0; j<3; j++) {
+                int value = this.matrix[i][j];
+                if(value == -1) {
+                    str += " " + SEP;
+                } else {
+                    str += Integer.toString(value) + SEP;
+                }
+            }
+            str += "\n";
+        }
+
+        str += "\n";
+
+        for(int i=ROWS-1; i>=0; i--) {
+            for(int j=COLS-1; j>=0; j--) {
+                int value = this.matrix[i][j];
+                if(value == -1) {
+                    str += " " + SEP;
+                } else {
+                    str += Integer.toString(value) + SEP;
+                }
+            }
+            str += "\n";
+        }
+
+        return str;
+    }
+```
