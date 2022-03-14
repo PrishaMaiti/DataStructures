@@ -43,6 +43,18 @@ public String toString() {
         System.out.println();
     }
  ```
+ And here's the swapToLowHighOrder method:
+ ```
+ public void swapToLowHighOrder(SwapObjects otherObj) {
+        if(this.value >= otherObj.value) {
+            int temp = this.value;
+            this.value = otherObj.value;
+            otherObj.value = temp;
+        } else {
+            System.out.println("No swap needed, as numbers are not in high to low order");
+        }
+    }
+ ```
 
 ## Challenge 3
 
