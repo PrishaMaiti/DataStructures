@@ -96,3 +96,73 @@ public String toString() {
         return str;
     }
 ```
+
+# Queue
+```
+public void add(T data) {
+        // add new object to end of Queue
+        LinkedList<T> newTailNode = new LinkedList<T>(data, null);
+
+        if (head == null)  // initial condition
+            this.head = this.tail = newTailNode;
+        else {  // nodes in queue
+            this.tail.setNextNode(newTailNode); // current tail points to new tail
+            this.tail = newTailNode;  // update tail
+        }
+        this.count++;
+}
+
+    /**
+     *  Delete/remove an existing object from the front/head of the Queue,
+     */
+    public T delete() {
+        if (head == null)  // initial condition
+            return null;
+        else {  // nodes in queue
+            T oldHeadData = this.head.getData();
+            this.head = this.getHead().getNext();  // update head
+            if(this.head != null) {
+                this.head.setPrevNode(null);
+            }
+            this.count--;
+            return oldHeadData;
+    }
+}
+```
+
+# Stack
+```
+public void push(T data) {
+        // push new object to top of Stack
+        LinkedList<T> newTopNode = new LinkedList<T>(data, null);
+
+        if (top == null)  // initial condition
+            this.top = this.bottom = newTopNode;
+        else {  // nodes exist in Stack
+            LinkedList<T> oldTopNode = this.top;
+            this.top.setNextNode(newTopNode); // current top points to new top
+            this.top = newTopNode;  // update top
+            this.top.setPrevNode(oldTopNode);
+        }
+
+        count++;
+}
+
+    /**
+     *  Delete/remove an existing object from the top of the Stack,
+     *
+     * @param  data, is the data to be found & popped off from the Stack.
+     */
+    public T pop() {
+        if (top == null)  // initial condition
+            return null;
+        else {  // nodes in Stack
+            LinkedList<T> retNode = this.getTop();
+            this.top = this.getTop().getPrevious();  // update top
+            if(this.top != null) {
+                this.top.setNextNode(null);
+            }
+            count--;
+            return retNode.getData();
+    }
+}
