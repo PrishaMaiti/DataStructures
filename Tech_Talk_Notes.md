@@ -14,5 +14,7 @@
 - We have to build our own stack
 - The first object in the queue: their previous node would be null, then their next node would be the next object in the queue. That object's previous node would be the previous object and then their next node would be null if there's no next object stacked or the next object if it is stacked
 - Each object has to be linked to each other, not just previous to next
+- Generic T is a templatized data type that allows the programmer to give a complex data structure a data type without having to worry about figuring out if it's a String, Integer, etc.
+- T does not work with primitive types, only reference types like String and wrapper classes like Integer. So an int array would have to be of type Integer in order for it to follow the Generic T protocol.
 # Tech Talk 2: Calculator
 # Tech Talk 3: Sorts
