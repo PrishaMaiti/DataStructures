@@ -98,6 +98,7 @@ public String toString() {
 ```
 
 # Queue
+The add and delete methods use an if-else statement which are based on whether or not the head of the queue's node is null. Accordingly, add will increment the count of the number of items in the queue and delete will decrement the count.
 ```
 public void add(T data) {
         // add new object to end of Queue
@@ -131,6 +132,7 @@ public void add(T data) {
 ```
 
 # Stack
+The nature of building a Stack is through creating a push and pop function. My push function uses the parameter of the data in the stack that's of type T and increments the count of the new, empty stack that serves as a template in order to reverse the Queue. My pop function has no parameters and returns the data of the node to be returned by calling the getData method in LinkedList.java and then finally decrements the count in order for the queue to be fully reversed.
 ```
 public void push(T data) {
         // push new object to top of Stack
