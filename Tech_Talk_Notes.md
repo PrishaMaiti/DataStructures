@@ -18,3 +18,11 @@
 - T does not work with primitive types, only reference types like String and wrapper classes like Integer. So an int array would have to be of type Integer in order for it to follow the Generic T protocol.
 # Tech Talk 2: Calculator
 # Tech Talk 3: Sorts
+
+# Tech Talk 2: Calculator
+- We use Reverse Polish Notation (RPN) with string conversion to make computer math easier, since it can be hard to calculate an expression with precedence rules/order of operations
+- Operators go into a stack and numbers go into a List
+- With appropriate execution of the push and pop functions between the Stack and List once you have the order in RPN, the process will follow the Order of Operations and correctly return the resulting value
+- Our task for the week: Build a calculator with basic operators and Power Operator
+- Extra Credit: Build variable assignment and evaluation into expressions (ex: a = 2, calculator would evaluate a + 1 returning 3)
+- Other extra credit: Add a sqrt function and build a Pythagorean Theorem expression. We might want to look at the Wikipedia article and pseudo code for help
