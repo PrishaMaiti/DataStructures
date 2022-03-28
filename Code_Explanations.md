@@ -1,4 +1,3 @@
-{% include navigation.html %}
 ## Challenge 1
 
 DynamicMenu.java
@@ -168,3 +167,5 @@ public void push(T data) {
             return retNode.getData();
     }
 }
+
+{% include navigation.html %}
