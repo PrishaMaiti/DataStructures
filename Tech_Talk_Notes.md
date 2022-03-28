@@ -23,3 +23,5 @@
 - Our task for the week: Build a calculator with basic operators and Power Operator
 - Extra Credit: Build variable assignment and evaluation into expressions (ex: a = 2, calculator would evaluate a + 1 returning 3)
 - Other extra credit: Add a sqrt function and build a Pythagorean Theorem expression. We might want to look at the Wikipedia article and pseudo code for help
+
+{% include navigation.html %}
