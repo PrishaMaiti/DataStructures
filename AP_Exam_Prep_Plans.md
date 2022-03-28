@@ -1,5 +1,3 @@
-{% include navigation.html %}
-
 Step 1: Go to College Board
 - For each unit, review the MCQ and FRQ
 - For MCQ, spend more time on what I got wrong than what I got right and understand why I got it wrong and what needs to be done to get it right next time
@@ -12,3 +10,5 @@ Step 2: Review Journals of Tri 1 and Tri 2
 Step 3: Review Backend Code of PBL
 - Study the backend code from Tri 1 PBL that allowed for an API to fetch Spotify's New Music Friday playlist
 - Study the backend code from Tri 2 PBL that allowed the quiz games to be created
+
+{% include navigation.html %}
