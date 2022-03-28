@@ -167,5 +167,6 @@ public void push(T data) {
             return retNode.getData();
     }
 }
+```
 
 {% include navigation.html %}
