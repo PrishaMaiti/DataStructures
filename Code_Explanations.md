@@ -208,5 +208,111 @@ private void termTokenizer() {
     }
   }
 ```
+```
+private void tokensToReversePolishNotation () {
+    // contains final list of tokens in RPN
+    this.reverse_polish = new ArrayList<String>();
 
+    // stack is used to reorder for appropriate grouping and precedence
+    Stack operatorStack = new Stack<String>();
+    for (String token : this.tokens) {
+        Debug.print("token : " + token);
+        switch (token) {
+            // If left bracket push token on to stack
+            case "(":
+                operatorStack.push(token);
+                break;
+            case ")":
+                while (!operatorStack.empty() &&
+                    !operatorStack.peek().equals("(")) {
+                    reverse_polish.add( (String)operatorStack.pop() );
+                }
+                operatorStack.pop();
+                break;
+            case "+":
+            case "-":
+            case "*":
+            case "/":
+            case "%":
+            case "^":
+                // While stack
+                // not empty AND stack top element
+                // and is an operator
+                while ( !operatorStack.empty() && 
+                        isOperator((String) operatorStack.peek()) ) {
+                    Debug.print("  peek-stack-top: " + operatorStack.peek());
+                    if ( isPrecedent(token, (String) operatorStack.peek() )) {
+                        break;
+                    } else {
+                        // new token-operator is of lower or equal precedence, so
+                        // pop stack-top-operator and add to RPN
+                        reverse_polish.add((String)operatorStack.pop());
+                        continue;
+                    }
+                }
+                // Push the new high precedence operator on the stack
+                operatorStack.push(token);
+                break;
+            default:    // Default should be a number(operand), there could be test here
+                this.reverse_polish.add(token);
+                break;
+        }
+    }
+
+    // Empty remaining tokens
+    while (!operatorStack.empty()) {
+        reverse_polish.add((String)operatorStack.pop());
+    }
+
+    Debug.print("tokensToReversePolishNotation this.reverse_polish => " + this.reverse_polish);
+  }
+  ```
+  ```
+  private void rpnToResult() {
+    // Stack used to hold operands while evaluating an RPN format of the calculation
+    Stack operandStack = new Stack();
+
+    // for loop to process RPN, example: 100 200 3 * +
+    for (String tokens : this.reverse_polish) {
+      // If the token is a number
+      if (!isOperator(tokens)) {
+        // Push number to stack
+        Double num = Double.parseDouble(tokens);
+        operandStack.push(num);
+      }
+        // else
+      else {
+        // Pop the two top entries
+        Double temp1 = (Double)operandStack.pop();
+        Double temp2 = (Double)operandStack.pop();
+        Double answer = 0.0;
+
+        // Based off of Token operator calculate result
+        if (tokens.equals("^")) {
+          answer = Math.pow(temp2, temp1);
+        }
+        if (tokens.equals("*")) {
+          answer = temp1 * temp2;
+        }
+        if (tokens.equals("/")) {
+          answer = temp2 / temp1;
+        }
+        if (tokens.equals("%")) {
+          answer = temp2 % temp1;
+        }
+        if (tokens.equals("+")) {
+          answer = temp2 + temp1;
+        }
+        if (tokens.equals("-")) {
+          answer = temp2 - temp1;
+        }
+
+        operandStack.push(answer);
+      }
+    }
+        // Pop final result and set as final result for expression
+    result = (Double)operandStack.pop();
+  }
+  ```
+  
 {% include navigation.html %}
