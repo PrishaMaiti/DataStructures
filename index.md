@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
-{% include navigation.html %}
 
 {% include_relative README.md %}
+
+{% include navigation.html %}
