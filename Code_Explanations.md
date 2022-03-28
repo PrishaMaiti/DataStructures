@@ -216,7 +216,6 @@ private void tokensToReversePolishNotation () {
     // stack is used to reorder for appropriate grouping and precedence
     Stack operatorStack = new Stack<String>();
     for (String token : this.tokens) {
-        Debug.print("token : " + token);
         switch (token) {
             // If left bracket push token on to stack
             case "(":
@@ -240,7 +239,6 @@ private void tokensToReversePolishNotation () {
                 // and is an operator
                 while ( !operatorStack.empty() && 
                         isOperator((String) operatorStack.peek()) ) {
-                    Debug.print("  peek-stack-top: " + operatorStack.peek());
                     if ( isPrecedent(token, (String) operatorStack.peek() )) {
                         break;
                     } else {
@@ -263,8 +261,6 @@ private void tokensToReversePolishNotation () {
     while (!operatorStack.empty()) {
         reverse_polish.add((String)operatorStack.pop());
     }
-
-    Debug.print("tokensToReversePolishNotation this.reverse_polish => " + this.reverse_polish);
   }
   ```
   ```
