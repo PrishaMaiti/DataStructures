@@ -169,7 +169,44 @@ public void push(T data) {
 }
 ```
 
-Calculator
+# Calculator
 The basis of the calculator is the stack data structure. When evaluating expressions, there are three main phases: parsing the expression that's originally one string into tokens (tokenizing), converting expression into Reverse Polish Notation (RPN), and using RPN to get the mathematical result. The following code snippets show the method written for each respective phase. In Phase 1, the expression is parsed into tokens in the method termTokenizer(). In Phase 2, the operators are pushed into the stack and if the operator being scanned is of lower precedence than that of what is at the top of the stack, as obtained from the java.util.Stack peek() function, then that operator in the stack is popped out of the stack and appended to the RPN. If the operator being scanned is of higher or equal precedence than that of what is at the top of the stack, as obtained from the java.util.Stack peek() function, then the scanned operator is pushed into the stack. Operands directly get appended to the RPN, and the final expression in RPN form is obtained in the method tokensToReversePolishNotation(). In Phase 3, now that RPN is obtained, it's the operators that are pushed into the stack and operators, since they're binary operators, take the top two numbers of the stack and evaluate them, then push the new number into the operand stack. This process repeats until there is only one number left in the stack, and that number is the final result, and what is obtained int he method rpnToResult().
+```
+private void termTokenizer() {
+    // contains final list of tokens
+    this.tokens = new ArrayList<String>();
+
+    int start = 0;  // term split starting index
+    StringBuilder multiCharTerm = new StringBuilder();    // term holder
+    
+    for (int i = 0; i < this.expression.length(); i++) {
+        Character c = this.expression.charAt(i);
+
+        if ( isOperator(c.toString() ) || isSeperator(c.toString())  ) {
+            // 1st check for working term and add if it exists
+            if (multiCharTerm.length() > 0) {
+                tokens.add(this.expression.substring(start, i));
+            }
+            // Add operator or parenthesis term to list
+            if (c != ' ') {
+                this.tokens.add(c.toString());
+            }
+            // Get ready for next term
+            start = i + 1;
+            multiCharTerm = new StringBuilder();
+        }    
+        else {
+            // multi character terms: numbers, functions, perhaps non-supported elements
+            // Add next character to working term
+            multiCharTerm.append(c);
+        }
+    }
+
+    // Add last term
+    if (multiCharTerm.length() > 0) {
+      tokens.add(this.expression.substring(start));
+    }
+  }
+```
 
 {% include navigation.html %}
