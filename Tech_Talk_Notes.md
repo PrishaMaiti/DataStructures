@@ -24,4 +24,14 @@
 - Extra Credit: Build variable assignment and evaluation into expressions (ex: a = 2, calculator would evaluate a + 1 returning 3)
 - Other extra credit: Add a sqrt function and build a Pythagorean Theorem expression. We might want to look at the Wikipedia article and pseudo code for help
 
+# Tech Talk 3: Sorts
+- There are 3 main types of sorts: selection sort, insertion sort, and merge sort
+- Selection sort is a linear sort algorithm where the programmer uses indexing (from 0 to n -1) to compare two elements
+- The element of smallest value is swapped with the lowest number in the round
+- Insertion sort works the same way as selection sort with linear sorting and inner loops, but an insertion point is selected for a new element to be inserted
+- Both selection and insertion sort algorithms can be applied to Arrays/ArrayLists
+- Merge Sort algorithm is based on divide and conquer. Recursion is used to divide the array into two groups until there's only 2 elements left to compare (swaps will happen if necessary)
+- After recursion, the algorithm puts back together the split groups using a sorted comparison
+
+
 {% include navigation.html %}
