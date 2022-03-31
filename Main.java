@@ -9,9 +9,7 @@ import MyUtils.SwapObjects;
 public class Main {
 
     private static void testerMethod_dynamicMenu() {
-      DynamicMenuTest x = new DynamicMenuTest();
-      //x.testDynamicMenu2();
-      x.testDynamicMenu();
+      DynamicMenu.main(null);
     }
   
     public static void main(String[] args) {
