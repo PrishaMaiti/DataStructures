@@ -1,3 +1,5 @@
+# Code Explanations
+
 ## Challenge 1
 
 DynamicMenu.java
