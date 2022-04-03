@@ -5,4 +5,5 @@ In the bubble sort algorithm, two adjacent elements are compared and a swap is d
 
 ## Selection Sort
 In the selection sort algorithm, two parts of the int array, the unsorted subarray and the sorted subarray, are what come to mind. The unsorted subarray is traversed and we find the minimum value within the ENTIRETY of the unsorted subarray. If the minimum value is not at the minimum index of the unsorted subarray, a swap is done and the element at the minimum index is appended to the end of the sorted subarray. In my nested for loop and main method down below, I execute the selection sort algorithm with the same int array of randomized integers 1-5000.
+
 {% include navigation.html %}
