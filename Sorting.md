@@ -47,6 +47,22 @@ public void selectionSort(int[] arr) {
 
 ## Insertion Sort
 Much like selection sort, insertion sort also deals with an unsorted and sorted subarray. Each element not being sorted is moved up an index and the element to be sorted is inserted into the appropriate index (inserted into index 0 first iteration, index 1 second iteration, etc.). The following is my selectionSort() method.
+```
+public void insertionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 1; i < n; i++) {
+            // The anchor acts as a stationary point per iteration to be compared with arr[j]
+            int anchor = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > anchor) {
+                arr[j + 1] = arr[j]; // Element at arr[j] moves up by 1 index
+                j = j - 1; // Reset j
+            }
+            arr[j + 1] = anchor; // Move anchor up by 1 index
+  }
+}
+```
 
 ## Merge Sort
 This is the most complicated sort. Essentially, the array is continuously split in half into temp arrays, until the elements are individually apart. This follows a divide-and-conquer logic, where each temp array is sorted before finally merging. However, just concatenating the temp arrays will only create an unsorted array again (two sets of sorted arrays put together is not one sorted array!). This is where recursion comes in, where if an element at the index of the left subarray is less than the element at index j of the right array, else recursively we must call the sort method again. I have two methods, one for merge and one for sort.
