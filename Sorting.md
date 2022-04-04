@@ -22,6 +22,29 @@ public void bubbleSort(int[] arr) {
 ## Selection Sort
 In the selection sort algorithm, two parts of the int array, the unsorted subarray and the sorted subarray, are what come to mind. The unsorted subarray is traversed and we find the minimum value within the ENTIRETY of the unsorted subarray. If the minimum value is not at the minimum index of the unsorted subarray, a swap is done and the element at the minimum index is appended to the end of the sorted subarray. In my nested for loop down below, I execute the selection sort algorithm with the same int array of randomized integers 1-5000.
 
+```
+public void selectionSort(int[] arr) {
+        int n = arr.length;
+  
+        // Unsorted subarray changes by index, with the "anchor" of the index moving up by 1 each iteration
+        for (int i = 0; i < n-1; i++) {
+            // Find the index of minimum element in unsorted subarray
+            int min_idx = i;
+            for (int j = i+1; j < n; j++) {
+                if (arr[j] < arr[min_idx]) {
+                    min_idx = j; // Remember the new minimum
+                }
+            }
+  
+            // Swap the found minimum element with the element at the minimum index of unsorted subarray
+            // And append it to end of sorted subarray
+            int temp = arr[min_idx];
+            arr[min_idx] = arr[i];
+            arr[i] = temp;
+        }
+}
+```
+
 ## Insertion Sort
 Much like selection sort, insertion sort also deals with an unsorted and sorted subarray. Each element not being sorted is moved up an index and the element to be sorted is inserted into the appropriate index (inserted into index 0 first iteration, index 1 second iteration, etc.). The following is my selectionSort() method.
 
