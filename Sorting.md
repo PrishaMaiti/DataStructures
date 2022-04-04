@@ -65,7 +65,7 @@ public void insertionSort(int[] arr) {
 ```
 
 ## Merge Sort
-This is the most complicated sort. Essentially, the array is continuously split in half into temp arrays, until the elements are individually apart. This follows a divide-and-conquer logic, where each temp array is sorted before finally merging. However, just concatenating the temp arrays will only create an unsorted array again (two sets of sorted arrays put together is not one sorted array!). This is where recursion comes in, where if an element at the index of the left subarray is less than the element at index j of the right array, else recursively we must call the sort method again. I have two methods, one for merge and one for sort.
+This is the most complicated sort, but also the most efficient one as when I ran it 12 times with 5000 random pieces of data, it produced the least amount of elapsed time. Essentially, the array is continuously split in half into temp arrays, until the elements are individually apart. This follows a divide-and-conquer logic, where each temp array is sorted before finally merging. However, just concatenating the temp arrays will only create an unsorted array again (two sets of sorted arrays put together is not one sorted array!). This is where recursion comes in, where if an element at the index of the left subarray is less than the element at index j of the right array, else recursively we must call the sort method again. I have two methods, one for merge and one for sort.
 ```
 public void merge(int arr[], int l, int m, int r) { // l is left, m is middle, r is right
         // Find sizes of two subarrays to be merged
