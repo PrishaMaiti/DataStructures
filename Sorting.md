@@ -66,5 +66,70 @@ public void insertionSort(int[] arr) {
 
 ## Merge Sort
 This is the most complicated sort. Essentially, the array is continuously split in half into temp arrays, until the elements are individually apart. This follows a divide-and-conquer logic, where each temp array is sorted before finally merging. However, just concatenating the temp arrays will only create an unsorted array again (two sets of sorted arrays put together is not one sorted array!). This is where recursion comes in, where if an element at the index of the left subarray is less than the element at index j of the right array, else recursively we must call the sort method again. I have two methods, one for merge and one for sort.
+```
+public void merge(int arr[], int l, int m, int r) { // l is left, m is middle, r is right
+        // Find sizes of two subarrays to be merged
+        int n1 = m - l + 1;
+        int n2 = r - m;
+  
+        // Create temp arrays
+        int L[] = new int[n1];
+        int R[] = new int[n2];
+  
+        // Copy data to temp left and right arrays
+        for (int i = 0; i < n1; ++i)
+            L[i] = arr[l + i];
+        for (int j = 0; j < n2; ++j)
+            R[j] = arr[m + 1 + j];
+  
+        // Merge the temp arrays
+  
+        // Initial indexes of first and second subarrays
+        int i = 0, j = 0;
+  
+        // Initial index of merged subarray
+        int k = l;
+        while (i < n1 && j < n2) {
+            if (L[i] <= R[j]) {
+                arr[k] = L[i];
+                i++;
+            }
+            else {
+                arr[k] = R[j];
+                j++;
+            }
+            k++;
+        }
+  
+        // Copy any remaining elements of left subarray
+        while (i < n1) {
+            arr[k] = L[i];
+            i++;
+            k++;
+        }
+  
+        // Copy any remaining elements of right subarray
+        while (j < n2) {
+            arr[k] = R[j];
+            j++;
+            k++;
+        }
+    }
+  
+    // Sort method that sorts arr[l..r] using merge() as its final step
+    
+public void sort(int arr[], int l, int r) {
+      if (l < r) {
+          // Find the middle point
+          int m =l+ (r-l)/2;
 
+          // Sort first and second halves
+          sort(arr, l, m); // Recursion
+          sort(arr, m + 1, r); //Recursion
+
+          // Merge the sorted halves
+          merge(arr, l, m, r);
+  }
+}
+```
 {% include navigation.html %}
