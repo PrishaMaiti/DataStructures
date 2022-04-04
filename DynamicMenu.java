@@ -32,7 +32,8 @@ public class DynamicMenu {
       menu.put(4, new DynamicMenu("Stack to Reverse Queue", () -> StackTester.main(null) ) );
       menu.put(5, new DynamicMenu("Calculator Using Stack", () -> CalculatorTester.main(null)));
       menu.put(6, new DynamicMenu("Bubble Sort", () -> BubbleSort.main(null)));
-            menu.put(7, new DynamicMenu("Selection Sort", () -> SelectionSort.main(null)));
+      menu.put(7, new DynamicMenu("Selection Sort", () -> SelectionSort.main(null)));
+      menu.put(8, new DynamicMenu("Insertion Sort", () -> InsertionSort.main(null)));
 
         System.out.println("Menu:");
         for (Map.Entry<Integer, DynamicMenu> pair : menu.entrySet()) {
