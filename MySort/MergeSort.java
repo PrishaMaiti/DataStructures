@@ -1,5 +1,6 @@
 import java.time.Duration;
 import java.time.Instant;
+// Merge Sort Algorithm
 public class MergeSort {
 
     public void merge(int arr[], int l, int m, int r) { // l is left, m is middle, r is right

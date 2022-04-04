@@ -1,4 +1,6 @@
-// Selection Sort
+import java.time.Duration;
+import java.time.Instant;
+// Selection Sort Algorithm
 public class SelectionSort {
     public void selectionSort(int[] arr) {
         int n = arr.length;
@@ -39,11 +41,11 @@ public class SelectionSort {
             arr[i] = (int)(Math.random() * 1000);
         }
         
-        MergeSort merge = new SelectionSort();
+        SelectionSort selection = new SelectionSort();
         System.out.println("Before: ");
         selection.printArray(arr);
         Instant start = Instant.now();  // time capture -- start
-        selection.sort(arr);
+        selection.selectionSort(arr);
         Instant end = Instant.now();    // time capture -- end
         System.out.println("\nAfter: ");
         selection.printArray(arr);

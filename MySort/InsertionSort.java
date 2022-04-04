@@ -1,5 +1,6 @@
 import java.time.Duration;
 import java.time.Instant;
+// Insertion Sort Algorithm
 public class InsertionSort {
     public void insertionSort(int[] arr) {
         int n = arr.length;
