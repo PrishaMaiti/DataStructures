@@ -1,3 +1,5 @@
+import java.time.Duration;
+import java.time.Instant;
 // Bubble Sort Algorithm
 public class BubbleSort {
 
@@ -24,15 +26,26 @@ public class BubbleSort {
  
     // Tester method
     public static void main(String args[]) {
-        Sorts t = new Sorts(7);
-        int time = t.getTimeElapsed();
+        int size = 5000;
+        int[] arr = new int[size];
+
+        // build an array with random numbers
+        for (int i = 0; i < size; i++) {
+            arr[i] = (int)(Math.random() * 1000);
+        }
+        
         BubbleSort bubble = new BubbleSort();
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
         System.out.println("Before: ");
         bubble.printArray(arr);
+        Instant start = Instant.now();  // time capture -- start
         bubble.bubbleSort(arr);
+        Instant end = Instant.now();    // time capture -- end
         System.out.println("\nAfter: ");
         bubble.printArray(arr);
-        System.out.println("\nElapsed Time: " + time);
+        Duration timeElapsed = Duration.between(start, end);
+        
+
+        System.out.println("\nElapsed Time nano-sec: " + (float)timeElapsed.getNano());
+        System.out.println("Per Element nano-sec: " + (float)timeElapsed.getNano()/size);
     }
 }
