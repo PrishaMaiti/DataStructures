@@ -1,9 +1,5 @@
+import java.util.*;
 // Challenge 1: Dynamic Menu
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.concurrent.RunnableFuture;
-
 public class DynamicMenu {
     String title;
     Runnable action;
@@ -36,13 +32,22 @@ public class DynamicMenu {
       menu.put(8, new DynamicMenu("Insertion Sort", () -> InsertionSort.main(null)));
       menu.put(9, new DynamicMenu("Merge Sort", () -> MergeSort.main(null)));
 
-        System.out.println("Menu:");
-        for (Map.Entry<Integer, DynamicMenu> pair : menu.entrySet()) {
-            System.out.println(pair.getKey() + " ==> " + pair.getValue().getTitle());
+      System.out.println("Menu:");
+      for (Map.Entry<Integer, DynamicMenu> pair : menu.entrySet()) {
+      System.out.println(pair.getKey() + " ==> " + pair.getValue().getTitle());
+      }
+  
+      int input = sc.nextInt();
+      try {
+        if (input == 0) {
+          return;
         }
-
-        int input = sc.nextInt();
         DynamicMenu m = menu.get(input);
         m.getAction().run();
-    }
+      }
+      catch(Exception e) {
+        System.out.println("Please enter a number listed in the menu.");
+      }
+      main(null);
+  }
 }

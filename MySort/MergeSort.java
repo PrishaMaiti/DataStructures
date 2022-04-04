@@ -9,7 +9,7 @@ public class MergeSort {
         int L[] = new int[n1];
         int R[] = new int[n2];
   
-        // Copy data to temp arrays
+        // Copy data to temp left and right arrays
         for (int i = 0; i < n1; ++i)
             L[i] = arr[l + i];
         for (int j = 0; j < n2; ++j)
@@ -20,7 +20,7 @@ public class MergeSort {
         // Initial indexes of first and second subarrays
         int i = 0, j = 0;
   
-        // Initial index of merged subarray array
+        // Initial index of merged subarray
         int k = l;
         while (i < n1 && j < n2) {
             if (L[i] <= R[j]) {
@@ -34,14 +34,14 @@ public class MergeSort {
             k++;
         }
   
-        /* Copy remaining elements of L[] if any */
+        // Copy any remaining elements of left subarray
         while (i < n1) {
             arr[k] = L[i];
             i++;
             k++;
         }
   
-        /* Copy remaining elements of R[] if any */
+        // Copy any remaining elements of right subarray
         while (j < n2) {
             arr[k] = R[j];
             j++;
@@ -49,16 +49,15 @@ public class MergeSort {
         }
     }
   
-    // Main function that sorts arr[l..r] using
-    // merge()
+    // Sort method that sorts arr[l..r] using merge() as its final step
     public void sort(int arr[], int l, int r) {
         if (l < r) {
             // Find the middle point
             int m =l+ (r-l)/2;
   
             // Sort first and second halves
-            sort(arr, l, m);
-            sort(arr, m + 1, r);
+            sort(arr, l, m); // Recursion
+            sort(arr, m + 1, r); //Recursion
   
             // Merge the sorted halves
             merge(arr, l, m, r);
