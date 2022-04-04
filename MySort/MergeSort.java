@@ -1,3 +1,5 @@
+import java.time.Duration;
+import java.time.Instant;
 public class MergeSort {
 
     public void merge(int arr[], int l, int m, int r) { // l is left, m is middle, r is right
@@ -50,7 +52,8 @@ public class MergeSort {
     }
   
     // Sort method that sorts arr[l..r] using merge() as its final step
-    public void sort(int arr[], int l, int r) {
+    
+  public void sort(int arr[], int l, int r) {
         if (l < r) {
             // Find the middle point
             int m =l+ (r-l)/2;
@@ -72,15 +75,26 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        Sorts t = new Sorts(7);
-        int time = t.getTimeElapsed();
+        int size = 5000;
+        int[] arr = new int[size];
+
+        // build an array with random numbers
+        for (int i = 0; i < size; i++) {
+            arr[i] = (int)(Math.random() * 1000);
+        }
+        
         MergeSort merge = new MergeSort();
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
         System.out.println("Before: ");
         merge.printArray(arr);
+        Instant start = Instant.now();  // time capture -- start
         merge.sort(arr, 0, arr.length - 1);
+        Instant end = Instant.now();    // time capture -- end
         System.out.println("\nAfter: ");
         merge.printArray(arr);
-        System.out.println("\nElapsed Time: " + time);
+        Duration timeElapsed = Duration.between(start, end);
+        
+
+        System.out.println("\nElapsed Time nano-sec: " + (float)timeElapsed.getNano());
+        System.out.println("Per Element nano-sec: " + (float)timeElapsed.getNano()/size);
     }
 }
