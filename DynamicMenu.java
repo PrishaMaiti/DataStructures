@@ -34,6 +34,7 @@ public class DynamicMenu {
       menu.put(6, new DynamicMenu("Bubble Sort", () -> BubbleSort.main(null)));
       menu.put(7, new DynamicMenu("Selection Sort", () -> SelectionSort.main(null)));
       menu.put(8, new DynamicMenu("Insertion Sort", () -> InsertionSort.main(null)));
+      menu.put(9, new DynamicMenu("Merge Sort", () -> MergeSort.main(null)));
 
         System.out.println("Menu:");
         for (Map.Entry<Integer, DynamicMenu> pair : menu.entrySet()) {
