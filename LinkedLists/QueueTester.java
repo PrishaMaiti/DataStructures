@@ -1,4 +1,8 @@
-class QueueTester {
+package LinkedLists;
+
+import FirstWeek.Animal;
+
+public class QueueTester {
     public static void main(String[] args)
     {
         // Create iterable Queue of Words

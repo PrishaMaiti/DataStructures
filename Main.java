@@ -3,8 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.concurrent.RunnableFuture;
-import MyUtils.DynamicMenuTest;
-import MyUtils.SwapObjects;
+import FirstWeek.DynamicMenu;
+import FirstWeek.SwapObjects;
 
 public class Main {
 

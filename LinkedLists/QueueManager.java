@@ -1,4 +1,6 @@
- /* Queue Manager
+package LinkedLists;
+
+/* Queue Manager
  * 1. "has a" Queue
  * 2. support management of Queue tasks (aka: titling, adding a list, printing)
  */

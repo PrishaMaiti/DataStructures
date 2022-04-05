@@ -1,3 +1,5 @@
+package LinkedLists;
+
 import java.util.*;
 
 // Week 2 Challenge 3: Build a Stack

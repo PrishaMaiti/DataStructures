@@ -1,8 +1,20 @@
+package FirstWeek;
+
+import LinkedLists.QueueTester;
+import LinkedLists.StackTester;
+import Calculator.CalculatorTester;
+import MySort.*;
+
 import java.util.*;
+
 // Challenge 1: Dynamic Menu
 public class DynamicMenu {
     String title;
     Runnable action;
+
+    public DynamicMenu(String title) {
+        this.title = title;
+    }
 
     public DynamicMenu(String title, Runnable action) {
         this.title = title;

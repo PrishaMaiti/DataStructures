@@ -1,3 +1,5 @@
+package LinkedLists;
+
 public class StackTester {
 
     static private void testCase1() {
