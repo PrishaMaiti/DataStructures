@@ -1,7 +1,6 @@
 package Calculator;
 
 import java.util.ArrayList;
-import java.lang.*;
 import java.util.HashMap;
 import java.util.Stack;
 
@@ -117,7 +116,7 @@ public class Calculator {
     this.reverse_polish = new ArrayList<String>();
 
     // stack is used to reorder for appropriate grouping and precedence
-    Stack operatorStack = new Stack<String>();
+    Stack<String> operatorStack = new Stack<>();
     for (String token : this.tokens) {
         Debug.print("token : " + token);
         switch (token) {
@@ -173,7 +172,7 @@ public class Calculator {
   // Takes RPN and produces a final result
   private void rpnToResult() {
     // Stack used to hold operands while evaluating an RPN format of the calculation
-    Stack operandStack = new Stack();
+    Stack<Double> operandStack = new Stack<>();
 
     // for loop to process RPN, example: 100 200 3 * +
     for (String tokens : this.reverse_polish) {
