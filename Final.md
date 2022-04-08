@@ -2,6 +2,6 @@
 
 ## [Commits](https://github.com/PrishaMaiti/DataStructures/graphs/contributors)
 
-##[Jekyll](https://prishamaiti.github.io/DataStructures/)
+## [Jekyll](https://prishamaiti.github.io/DataStructures/)
 # All code is thoroughly explained in playlist as well as Code_Explanations.md and Sorting.md
 {% include navigation.html %}
