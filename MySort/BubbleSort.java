@@ -1,7 +1,35 @@
+package MySort;
+
 import java.time.Duration;
 import java.time.Instant;
+import java.util.ArrayList;
 // Bubble Sort Algorithm
 public class BubbleSort {
+    private static ArrayList<Duration> times = new ArrayList<>();
+
+    public void addTimes(Duration time) {
+        times.add(time);
+    }
+
+    public long averageTimes() {
+        long total = 0;
+        long min = Long.MAX_VALUE;
+        long max = Long.MIN_VALUE;
+        for (Duration i : times) {
+            total += i.toNanos();
+            if (i.toNanos() > max) {
+                max = i.toNanos();
+            }
+            if (i.toNanos() < min) {
+                min = i.toNanos();
+            }
+        }
+        if (times.size() > 2) {
+            total -= (max + min);
+            return total/(times.size()-2);
+        }
+        return total/(times.size());
+    }
 
     public void bubbleSort(int[] arr) {
         int n = arr.length;
@@ -43,9 +71,11 @@ public class BubbleSort {
         System.out.println("\nAfter: ");
         bubble.printArray(arr);
         Duration timeElapsed = Duration.between(start, end);
+        times.add(timeElapsed);
         
 
         System.out.println("\nElapsed Time nano-sec: " + (float)timeElapsed.getNano());
         System.out.println("Per Element nano-sec: " + (float)timeElapsed.getNano()/size);
+        System.out.println("Average Times nano-sec: " + (float) bubble.averageTimes() + " out of " + times.size() + " trials");
     }
 }

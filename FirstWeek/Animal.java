@@ -1,3 +1,5 @@
+package FirstWeek;
+
 public class Animal {
 	// Instance data (object variable / object attribute)
 	private final String name;
