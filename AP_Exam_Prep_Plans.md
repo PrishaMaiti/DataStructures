@@ -11,7 +11,7 @@ Step 3: Review Backend Code of PBL
 - Study the backend code from Tri 1 PBL that allowed for an API to fetch Spotify's New Music Friday playlist
 - Study the backend code from Tri 2 PBL that allowed the quiz games to be created
 
-### Timebox
+## Timebox
 
 
 {% include navigation.html %}
