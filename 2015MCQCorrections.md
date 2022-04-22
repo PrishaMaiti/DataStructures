@@ -19,4 +19,9 @@
 ### What I Answered: A
 ### Reasoning: I guessed on this question. The correct answer is E because you need the casting to int for each of the numbers obtained from rolling each cube. Then you need to add 2, as there are 2 cubes.
 
+## Question 13
+### Correct Answer: A
+### What I Answered: E
+### Reasoning: I did this in my head, so that was probably where the error was. I just redid the problem by having my calculations typed out and I got the right answer this time.
+
 {% include navigation.html %}
