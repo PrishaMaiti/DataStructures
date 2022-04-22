@@ -14,4 +14,9 @@
 ### What I Answered: E
 ### Reasoning: This was one of the questions I ended up guessing on due to a time constraint. Now that I have fully read the question, I now understand why the answer is A, since none of the strings have the "art" substring in it, yet when the strings are concatenated, the ar in in similar and the t in today would have art, and the method would incorrectly return true.
 
+## Question 9
+### Correct Answer: E
+### What I Answered: A
+### Reasoning: I guessed on this question. The correct answer is E because you need the casting to int for each of the numbers obtained from rolling each cube. Then you need to add 2, as there are 2 cubes.
+
 {% include navigation.html %}
