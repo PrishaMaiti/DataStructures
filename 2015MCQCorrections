@@ -1,0 +1,5 @@
+# Score: 21/39
+## Question 4
+# Correct Answer: C
+# What I Answered: D
+# Reasoning: I chose C without acknowledging that negative values can be a part of the int array too. I immediately thought that the largest value in arr being 0 would cause and ArrayIndexOutOfBounds exception, when in reality that's not true. With negative numbers, the logic of if val > maxVal would not function correctly.
