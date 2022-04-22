@@ -24,4 +24,9 @@
 ### What I Answered: E
 ### Reasoning: I did this in my head, so that was probably where the error was. I just redid the problem by having my calculations typed out and I got the right answer this time.
 
+## Question 16
+### Correct Answer: E
+### What I Answered: C
+### Reasoning: I saw the iteration for the rows and immediately thought that the answer would return the row index, when in reality, when you iterate for rows, you're finding the column index as the column index can be found in each row.
+
 {% include navigation.html %}
