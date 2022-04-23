@@ -34,5 +34,9 @@
 ### What I Answered: A
 ### Reasoning: I understand why statement I works, but I didn't consider how statements II and III also work. II works because x = 1 will not fit the if condition of modulus 2 == 0 anyway. III works because x is incremented by 2 in the while loop, so only odd numbers will be what x is equal to, resulting in the printing of nothing.
 
+## Question 20
+### Correct Answer: E
+### What I Answered: B
+### Reasoning: It's not the maximum value that we're returning the index of. Since we're keeping track of the count and updating index based on the increment of the count variable, we're returning the index of the value that occurs most often in the nums array.
 
 {% include navigation.html %}
