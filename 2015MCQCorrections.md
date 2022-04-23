@@ -29,4 +29,10 @@
 ### What I Answered: C
 ### Reasoning: I saw the iteration for the rows and immediately thought that the answer would return the row index, when in reality, when you iterate for rows, you're finding the column index as the column index can be found in each row.
 
+## Question 19
+### Correct Answer: E
+### What I Answered: A
+### Reasoning: I understand why statement I works, but I didn't consider how statements II and III also work. II works because x = 1 will not fit the if condition of modulus 2 == 0 anyway. III works because x is incremented by 2 in the while loop, so only odd numbers will be what x is equal to, resulting in the printing of nothing.
+
+
 {% include navigation.html %}
