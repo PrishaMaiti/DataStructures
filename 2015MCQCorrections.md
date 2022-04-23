@@ -39,4 +39,9 @@
 ### What I Answered: B
 ### Reasoning: It's not the maximum value that we're returning the index of. Since we're keeping track of the count and updating index based on the increment of the count variable, we're returning the index of the value that occurs most often in the nums array.
 
+## Question 22
+### Correct Answer: A
+### What I Answered: D
+### Reasoning: Option A actually goes through each individual element of the array, but having n be an element of each row. D however, is not concerning the length of numbers, but the length of numbers at row index 0, which doesn't make sense in the context of the problem, since all rows need to be considered.
+
 {% include navigation.html %}
