@@ -44,4 +44,29 @@
 ### What I Answered: D
 ### Reasoning: Option A actually goes through each individual element of the array, but having n be an element of each row. D however, is not concerning the length of numbers, but the length of numbers at row index 0, which doesn't make sense in the context of the problem, since all rows need to be considered.
 
+## Question 26
+### Correct Answer: E
+### What I Answered: B
+### Reasoning: 
+
+## Question 28
+### Correct Answer: B
+### What I Answered: C
+### Reasoning: I got the correct value for the compare values part. For the assign to temp part, I guessed due to time constraints. Assign to temp will execute 5 times because the array length is 6 and therefore there are 5 total comparisons.
+
+## Question 30
+### Correct Answer: B
+### What I Answered: D
+### Reasoning: II is correct. The reason why I also allows the method getCost to work as intended is because the conditions for the if statements, just like statement II, match up with the different possibilities (>= 10, >= 5, and > 0). Greater than 0 is the default condition as per the precondition.
+
+## Question 31
+### Correct Answer: E
+### What I Answered: C
+### Reasoning: Another question I guessed on. I just went through the code segment and I figured out the pattern of when X's occur on the board, which matches with Option E. Option B has a similar pattern, but only the first 6 X's are what are supposed to be displayed on the board.
+
+## Question 34
+### Correct Answer: D
+### What I Answered: C
+### Reasoning: 
+
 {% include navigation.html %}
