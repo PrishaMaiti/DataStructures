@@ -67,6 +67,11 @@
 ## Question 34
 ### Correct Answer: D
 ### What I Answered: C
-### Reasoning: 
+### Reasoning: C is correct because we're concerned with indexing, so our maximum index is the size of listOfWords - 1, not the size itself.
+
+## Question 35
+### Correct Answer: C
+### What I Answered: E
+### Reasoning: I had to guess on this question. Now that I actually went through the method with the int array of values, I got the correct answer of 5.
 
 {% include navigation.html %}
