@@ -1,13 +1,13 @@
-public class Range implements NumberGroup {
+public class EvenRange implements NumberGroup {
     int min, max;
 
-    public Range(int min, int max) {
+    public EvenRange(int min, int max) {
         this.min = min;
         this.max = max;
     }
 
     public boolean contains(int num) {
-        if(num >= min && num <= max) {
+        if(num >= min && num <= max && num%2==0) {
             return true;
         }
         else

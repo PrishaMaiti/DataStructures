@@ -1,6 +1,9 @@
-package FRQs;
-import java.util.Scanner;
-
+class Debug {
+    public static boolean on = true;
+    public static void print( String s ) {
+        if (on) System.out.println(s);
+    }
+}
 public class HiddenWord {
     String hiddenWord;
     public HiddenWord(String h) {
@@ -13,7 +16,6 @@ public class HiddenWord {
     // H****
     public String getHint(String guess) {
         StringBuilder hint = new StringBuilder(guess);
-        char c;
         for(int i = 0; i < guess.length(); i++) {
             if(guess.charAt(i) == hiddenWord.charAt(i)) {
                 hint.setCharAt(i, guess.charAt(i));
@@ -21,15 +23,7 @@ public class HiddenWord {
                 hint.setCharAt(i, '*');
             }
         }
-        System.out.println(hint); // debug
+        Debug.print("Guess=" + guess + ", Hint=" + new String(hint)); // debug
         return new String(hint);
-    }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a 5-letter word: ");
-        String original = sc.nextLine();
-        HiddenWord hiddenWord = new HiddenWord("HEART");
-        hiddenWord.getHint("HARPS");
-        sc.close();
     }
 }
