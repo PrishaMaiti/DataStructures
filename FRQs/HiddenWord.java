@@ -1,9 +1,3 @@
-class Debug {
-    public static boolean on = true;
-    public static void print( String s ) {
-        if (on) System.out.println(s);
-    }
-}
 public class HiddenWord {
     String hiddenWord;
     public HiddenWord(String h) {
@@ -23,7 +17,6 @@ public class HiddenWord {
                 hint.setCharAt(i, '*');
             }
         }
-        Debug.print("Guess=" + guess + ", Hint=" + new String(hint)); // debug
         return new String(hint);
     }
 }

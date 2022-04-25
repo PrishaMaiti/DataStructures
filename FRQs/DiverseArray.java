@@ -1,12 +1,5 @@
 import java.util.HashSet;
 
-class Debug {
-    public static boolean on = true;
-    public static void print( String s ) {
-        if (on) System.out.println(s);
-    }
-}
-
 public class DiverseArray {
     public static int arraySum(int[] arr) {
         int sum = 0;
@@ -16,11 +9,9 @@ public class DiverseArray {
         return sum;
     }
     public static int[] rowSums(int[][] arr2D) {
-        Debug.print("Length of arr2D==>" + arr2D.length);
         int arrResult[] = new int[arr2D.length];
         for(int i = 0; i < arr2D.length; i++){
             arrResult[i] = arraySum(arr2D[i]);
-            Debug.print("Row sum for #" + i + " => " + arrResult[i]);
         }
         return arrResult;
     }
