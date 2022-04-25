@@ -74,4 +74,19 @@
 ### What I Answered: E
 ### Reasoning: I had to guess on this question. Now that I actually went through the method with the int array of values, I got the correct answer of 5.
 
+## Question 36
+### Correct Answer: D
+### What I Answered: B
+### Reasoning: The answer is 11 because 11 is the maximum number of times the array can be divided in half while the start continues to be less than or equal to the end.
+
+## Question 37
+### Correct Answer: E
+### What I Answered: C
+### Reasoning: Both answers confirm that III works. The reason why II also works is because k is being decremented at the end of the while loop, so the words are also being printed backwards just like III is doing.
+
+## Question 38
+### Correct Answer: C
+### What I Answered: B
+### Reasoning: B is incorrect because this method is not just considered with the last element of the array numbers, but all elements that are equal to val.
+
 {% include navigation.html %}
