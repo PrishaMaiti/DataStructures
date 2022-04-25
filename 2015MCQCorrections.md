@@ -47,7 +47,7 @@
 ## Question 26
 ### Correct Answer: E
 ### What I Answered: B
-### Reasoning: 
+### Reasoning: We went over this question in class. If we correctly understand the method changeIt, we can see that it's not 5 0's being printed before 6, but the first five counting numbers being printed subsequently.
 
 ## Question 28
 ### Correct Answer: B
