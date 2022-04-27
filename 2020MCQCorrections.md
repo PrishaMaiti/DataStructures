@@ -20,4 +20,9 @@
 ### What I Answered: B
 ### Reasoning: For B, it's the other way around. Doubles cannot be assigned to ints but ints can still be assigned to doubles. However, n1 and n2 are not defined, but are rather only used for the Points class constructor.
 
+## Question 9
+### Correct Answer: B
+### What I Answered: C
+### Reasoning: I made a calculation mistake with the final digit. I just redid it and got 1 for the final digit.
+
 {% include navigation.html %}
