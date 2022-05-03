@@ -83,6 +83,31 @@
 ## Question 31
 ### Correct Answer: A
 ### What I Answered: D
-### Reasoning: 
+### Reasoning: I works but III doesn't work because it doesn't account for the -1.
+
+## Question 33
+### Correct Answer: E
+### What I Answered: C
+### Reasoning: I had to guess on this question out of time constraints. Redoing the traversal in my head, I got the output shown in option E.
+
+## Question 34
+### Correct Answer: E
+### What I Answered: B
+### Reasoning: The method will still return an empty ArrayList when no matches are found, not through a NullPointerException. Instead, the method is skipping elements of numList during the traversal.
+
+## Question 35
+### Correct Answer: A
+### What I Answered: A
+### Reasoning: I got the correct first missing condition, but valCount must be greater than modeCount, not just not equal to modeCount, in order for valCount to be correctly incremented.
+
+## Question 39
+### Correct Answer: D
+### What I Answered: C
+### Reasoning: Calling recurMethod on "edcba" will correctly compare the letters, so that recurMethod is recursively called, ultimately resulting in the Boolean value of true.
+
+## Question 40
+### Correct Answer: A
+### What I Answered: C
+### Reasoning: Line 3 will cause a compiler error because obj1 of class type B cannot guarantee which message method to use, the one from class A or the one from class B.
 
 {% include navigation.html %}
