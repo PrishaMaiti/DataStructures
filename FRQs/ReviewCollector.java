@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class ReviewCollector {
     private ArrayList<ProductReview> reviewList;
     private ArrayList<String> productList;
@@ -9,7 +11,7 @@ public class ReviewCollector {
 
     public void addReview(ProductReview prodReview) {
         reviewList.add(prodReview);
-        productList.add(prodReview.name);
+        productList.add(prodReview.getName());
     }
 
     public int getNumGoodReviews(String prodName) {
