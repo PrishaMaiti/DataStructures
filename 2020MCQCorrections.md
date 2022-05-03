@@ -45,4 +45,9 @@
 ### What I Answered: D
 ### Reasoning: The number of asterisks are printed the other way around as per the order of where the recursive method call is in the method.
 
+## Question 17
+### Correct Answer: D
+### What I Answered: B
+### Reasoning: 50 + 10 * 2 = 70.
+
 {% include navigation.html %}
