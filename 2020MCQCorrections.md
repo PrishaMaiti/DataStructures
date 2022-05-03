@@ -25,4 +25,24 @@
 ### What I Answered: C
 ### Reasoning: I made a calculation mistake with the final digit. I just redid it and got 1 for the final digit.
 
+## Question 10
+### Correct Answer: D
+### What I Answered: B
+### Reasoning: If 5 and 10 were num1 and num2 respectively, only 0 will be printed. 20 and 5 however, the first output will still be 0, and when i = 10, 10 will be printed.
+
+## Question 12
+### Correct Answer: B
+### What I Answered: C
+### Reasoning: III is incorrect because we need the object itself to not equal null, not just the attribute of its name. Hence II is correct.
+
+## Question 14
+### Correct Answer: D
+### What I Answered: A
+### Reasoning: The reason why III works as well is because in this context, not having the else keyword the way it's implemented in I would not affect the code's logic. Once again, statement II will not work because a static method cannot have a return type.
+
+## Question 16
+### Correct Answer: B
+### What I Answered: D
+### Reasoning: The number of asterisks are printed the other way around as per the order of where the recursive method call is in the method.
+
 {% include navigation.html %}
