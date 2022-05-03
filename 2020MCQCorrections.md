@@ -50,4 +50,39 @@
 ### What I Answered: B
 ### Reasoning: 50 + 10 * 2 = 70.
 
+## Question 18
+### Correct Answer: E
+### What I Answered: C
+### Reasoning: I accidentally put the wrong starting value for p. It should be 1 and not 0.
+
+## Question 21
+### Correct Answer: D
+### What I Answered: B
+### Reasoning: By the nature of k = j + 1, the words are printed in a backwards order starting from "of".
+
+## Question 24
+### Correct Answer: D
+### What I Answered: C
+### Reasoning: The code segment would print 11 if the someClass constructor did not increment y. If we redo the math, we get 14 as the final result. I think I made a calculation error.
+
+## Question 26
+### Correct Answer: C
+### What I Answered: D
+### Reasoning: A would be printed n more times than B if the outer and inner for loop Boolean conditions for II were j < m and k <= n, respectively. Redoing the math, A is printed m more times than B.
+
+## Question 27
+### Correct Answer: E
+### What I Answered: B
+### Reasoning: If b were true, the Boolean logic wouldn't work, and hence c would never be assigned false. Since b can be false, c will be false under that circumstance by DeMorgan's laws.
+
+## Question 29
+### Correct Answer: E
+### What I Answered: A
+### Reasoning: 16 + 8 + 4 + 2 + 1 + 10 = 41. We have to acknowledge all recursive steps, not just the final value of num.
+
+## Question 31
+### Correct Answer: A
+### What I Answered: D
+### Reasoning: 
+
 {% include navigation.html %}
