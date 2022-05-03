@@ -18,16 +18,16 @@ public class ReviewCollectorTester {
         reviewCollect.addReview(new ProductReview("iPhone13", "Not the best I have used so far"));
         reviewCollect.addReview(new ProductReview("iPhone13", "Best Best best!"));
 
-        System.out.println("Good Reviewes = " + reviewCollect.getNumGoodReviews("iPhone7"));
+        System.out.println("Good Reviews = " + reviewCollect.getNumGoodReviews("iPhone7"));
     }
 
     public static void testCase2() { // test case for part b
         ReviewCollector reviewCollect = new ReviewCollector(buildProductReviewList());
-        System.out.println("Good Reviewes = " + reviewCollect.getNumGoodReviews("iPhone13"));
+        System.out.println("Good Reviews = " + reviewCollect.getNumGoodReviews("iPhone13"));
     }
 
     public static void main(String[] args) {
-        testCase1();
-        //testCase2();
+        //testCase1();
+        testCase2();
     }
 }

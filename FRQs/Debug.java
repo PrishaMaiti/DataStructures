@@ -1,4 +1,4 @@
-public class Debug {
+/*public class Debug {
     public static boolean on = true;
 
     public static void print( String s ) {
@@ -8,4 +8,4 @@ public class Debug {
     public static void print( int x ) {
         Debug.print("" + x);
     }
-}
+}*/
